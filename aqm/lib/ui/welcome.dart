@@ -1,6 +1,7 @@
 import 'package:aqm/models/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:aqm/models/location.dart';
+import 'package:aqm/ui/home.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -82,7 +83,8 @@ class _WelcomeState extends State<Welcome> {
         backgroundColor: myConstants.secondaryColor,
         child: const Icon(Icons.pin_drop),
         onPressed: () {
-          print('Pressed');
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => const Home()));
         },
       ),
     );
